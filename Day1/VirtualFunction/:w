@@ -1,0 +1,11 @@
+#include "Derived.h"
+
+int main ( ) {
+
+	Base *ptr = new Derived;
+	ptr->F1();
+
+	delete ptr;
+
+	return 0;
+}

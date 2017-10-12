@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+void swap (int x, int y) {
+	int temp = x;
+	x = y;
+	y = temp;
+}
+
+int main ( ) {
+	int a = 100;
+	int b = 200;
+
+	cout << "Value of a before swapping is " << a << endl;
+	cout << "Value of b before swapping is " << b << endl;
+
+	swap ( a, b)
+
+	cout << "Value of a after swapping is " << a << endl;
+	cout << "Value of b after swapping is " << b << endl;
+}
+
