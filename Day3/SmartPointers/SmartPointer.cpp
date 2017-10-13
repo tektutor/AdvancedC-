@@ -1,20 +1,24 @@
 #include "SmartPointer.h"
 
-SmartPointer::SmartPointer(MyClass *ptrMyClass) {
-	this->ptrMyClass = ptrMyClass;
+template <typename T>
+SmartPointer<T>::SmartPointer(T *ptrClass) {
+	this->ptrClass = ptrClass;
 }
 
-SmartPointer::~SmartPointer() {
-	if ( NULL != ptrMyClass )
-		delete ptrMyClass;
-	ptrMyClass = NULL;
+template <typename T>
+SmartPointer<T>::~SmartPointer() {
+	if ( NULL != ptrClass )
+		delete ptrClass;
+	ptrClass = NULL;
 }
 
-MyClass SmartPointer::operator *() {
-	return *ptrMyClass;
+template <typename T>
+T SmartPointer<T>::operator *() {
+	return *ptrClass;
 }
 
-MyClass* SmartPointer::operator ->( ) {
-	return ptrMyClass;
+template <typename T>
+T* SmartPointer<T>::operator ->( ) {
+	return ptrClass;
 }
 

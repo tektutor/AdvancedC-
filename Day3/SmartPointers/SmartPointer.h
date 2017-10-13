@@ -1,31 +1,14 @@
 #include <iostream>
 using namespace std;
 
-class MyClass {
-private:
-	int x;
-public:
-	MyClass(int data) {
-		cout << "MyClass constructor " << endl;
-		x = data;
-	}
 
-	~MyClass() {
-		cout << "MyClass destructor" << endl;
-	}
-
-	void print() {
-		cout << "Value of x is " << x << endl;
-	}
-
-};
-
+template <typename T>
 class SmartPointer {
 private:
-	MyClass *ptrMyClass;
+	T *ptrClass;
 public:
-	SmartPointer(MyClass *);
+	SmartPointer(T *);
 	~SmartPointer();
-	MyClass operator * ( );
-	MyClass* operator ->( );
+	T operator * ( );
+	T* operator -> ( );
 };
