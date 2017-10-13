@@ -7,7 +7,7 @@ OBJS = $(BIN)/RPNCalculator.o \
 
 LIBS = -pthread $(BIN)/libgtest.a
 
-CPPFLAGS = -std=c++11
+CPPFLAGS = -std=c++11 -g
 
 INC = -I googletest \
       -I googletest/include \

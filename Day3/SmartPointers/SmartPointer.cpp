@@ -21,4 +21,3 @@ template <typename T>
 T* SmartPointer<T>::operator ->( ) {
 	return ptrClass;
 }
-
