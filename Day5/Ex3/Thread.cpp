@@ -45,7 +45,7 @@ void Thread::run() {
 
 				locker.unlock();
 
-				this_thread::sleep_for ( 1s );
+				this_thread::sleep_for ( chrono::seconds(1) );
 
 				break;
 
@@ -64,7 +64,7 @@ void Thread::run() {
 
 				locker.unlock();
 
-				this_thread::sleep_for ( 1s );
+				this_thread::sleep_for ( chrono::seconds(1) );
 
 				break;
 		}
