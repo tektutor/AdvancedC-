@@ -45,7 +45,8 @@ void Thread::run() {
 
 				locker.unlock();
 
-				this_thread::sleep_for ( chrono::seconds(1) );
+				//this_thread::sleep_for ( 1s ); works from C++14
+				this_thread::sleep_for ( chrono::seconds(1) ); //C++11
 
 				break;
 
